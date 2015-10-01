@@ -1,6 +1,6 @@
 {
-  "name": "hybridatv-element",
-  "version": "0.1.13",
+  "name": "hybridatv-widget",
+  "version": "0.1.1",
   "description": "the way to hbbtv",
   "main": "src/base.js",
   "private": true,
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com//trimata/hybridatv-contrib-element.git"
+    "url": "https://github.com/trimata/hybridatv-contrib-widget.git"
   },
   "keywords": [
     "hbbtv"
