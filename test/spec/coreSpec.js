@@ -1,12 +1,12 @@
 /* globals define, describe, beforeEach, afterEach, it, expect */
 
 define([
-  'src/base'
-], function(Element) {
+  'src/base',
+  'hybridatv/helpers/polyfil',
+], function(Widget, polyfil) {
   'use strict';
 
-
-  describe('Element', function() {
+  describe('Widget', function() {
     var _el;
     var elem;
 
@@ -14,7 +14,7 @@ define([
 
       _el = document.createElement('div');
       document.body.appendChild(_el);
-      elem = new Element(_el);
+      elem = new Widget(_el);
     });
 
     afterEach(function() {
@@ -22,8 +22,8 @@ define([
     });
 
 
-    it('has reference to the DOM object', function() {
-      expect(elem.el).toEqual(_el);
+    it('has "hb-class" widget', function() {
+      expect(polyfil.hasClass(_el, 'hb-widget')).toBe(true);
     });
 
   });
